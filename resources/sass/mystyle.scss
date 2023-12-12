@@ -1,0 +1,12 @@
+$secondary-color: #2ecc71;
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+
+  .pagination {
+    color: $secondary-color;
+    font-style: italic;
+  }
+}

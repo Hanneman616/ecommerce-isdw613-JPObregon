@@ -1,0 +1,9 @@
+.container {
+  width: 100%;
+  margin: 5 auto;
+  padding: 10px; }
+  .container .pagination {
+    color: #939b27;
+    font-style: italic; }
+
+/*# sourceMappingURL=mystyle.css.map */
