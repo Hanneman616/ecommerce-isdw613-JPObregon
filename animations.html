@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+    <style>
+        @keyframes example {
+            from{
+                background-color: red;
+            }
+            to{
+                background-color: yellow;
+            }
+        }
+
+
+        @keyframes example2 {
+            0%{
+                background-color: red;
+                
+            }
+            25%{
+                background-color: yellow;
+            }
+            50%{
+                background-color: blue;
+            }
+            100%{
+                background-color: green;
+            }
+        }
+        #animation1{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation-name: example2;
+            animation-duration: 4s;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-timing-function: linear;
+        }
+        #container{
+            width: 400px;
+            height: 100px;
+            position: relative;
+            border: 2px solid black;
+        }
+        @keyframes bounce{
+            0%{
+                top: 0px;
+                left: 0px;
+            }
+            25%{
+                top: 0px;
+                left: 360px;
+            }
+            50%{
+                top: 60px;
+                left: 360px;
+            }
+            75%{
+                top: 60px;
+                left: 0px;
+            }
+            100%{
+                top: 0px;
+                left: 0px;
+            }
+
+        }
+
+        #child{
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-color: red;
+            border-radius: 50%;
+            animation-name: example2;
+            animation: bounce 10s;
+            animation-iteration-count: infinite;
+       
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+    <div id="animation1"></div>
+    <div id="container">
+        <div id="child"></div>
+    </div>
+    
+</body>
+</html>

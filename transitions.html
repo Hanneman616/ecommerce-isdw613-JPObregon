@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+
+    <style>
+        #transition1{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            /* transition-property: width;
+            transition-duration: 1s; */
+            transition: width 0.5s;
+            border-radius: 50%;
+        }
+
+        #transition1:hover{
+            width: 300px;
+        }
+
+        #transition2{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            transition: width 0.5s, height 0.5s;
+        }
+
+        #transition2:hover{
+            width: 200px;
+            height: 200px;
+        }
+        
+        #transition3{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            transition: width 0.5s, height 0.5s, background-color 0.5s;
+            transition-timing-function: linear;
+        }
+        #transition3:hover{
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+        }
+        #transition4{
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            transition: background-color 0.5s, border-radius 0.5s;
+            transition-timing-function: ease-in;
+        } 
+        #transition4:hover{
+            
+            background-color: purple;
+            border-radius: 50%;
+        }
+
+    </style>
+
+
+
+</head>
+<body>
+
+    <div id="transition1">transition1</div>
+    <div id="transition2">transition2</div>
+    <div id="transition3">transition3</div>
+    <div id="transition4">transition4</div>
+
+    
+</body>
+</html>
