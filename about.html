@@ -6,110 +6,120 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <!-- Link to Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
     <style>
+        body {
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
 
         .mititulo {
             font-size: 2em;
             font-weight: bold;
-            color: rgb(255, 0, 0);
+            color: #f3f3f3;
             text-align: center;
             text-transform: capitalize;
-            text-shadow: 2px 2px 5px black;
-            background-color: aqua;
-            border: 1px solid black;
-            padding: 10px 30px 10px;
-
-            outline-style: solid;
-            outline-color: blueviolet;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            background-color: #17a2b8;
+            border: 1px solid #0d6efd;
+            padding: 10px 30px;
+            border-radius: 8px;
+            margin-bottom: 20px;
         }
 
         .mitexto {
-            font-size: 1.5em;
-            font-weight: bold;
-            color: rgb(0, 0, 255);
+            font-size: 1.2em;
+            color: #0456ad;
             text-align: justify;
-            text-decoration: underline;
             text-indent: 20px;
+            margin-bottom: 30px;
         }
 
-        table,th,td{
-            border:1px solid black;
-            width: 50%;
+        table {
+            width: 100%;
+            margin-bottom: 30px;
         }
 
-        span:first-child{
-            color: rgb(229, 255, 0);
-            background-color: brown;
+        table,
+        th,
+        td {
+            border: 1px solid #dee2e6;
+            border-collapse: collapse;
         }
 
-        p::first-letter{
-            font-size: 2em;
-            color: rgb(255, 0, 0);
-            text-shadow: 2px 2px 5px black;
+        th,
+        td {
+            padding: 8px;
+            text-align: left;
         }
 
-        p::first-line{
-            font-size: 2em;
-            color: rgb(255, 0, 0);
-            text-shadow: 2px 2px 5px black;
+        thead {
+            background-color: #007bff;
+            color: #fff;
         }
 
+        tbody tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
 
+        span:first-child {
+            color: #e5ff00;
+            background-color: #8b4513;
+            padding: 2px 5px;
+            border-radius: 5px;
+        }
 
+        
+        
     </style>
-
-
-
 </head>
 
 <body>
 
-    <p id="titulo" class="mititulo">Acerca de</p>
+    <div class="container">
+        <p id="titulo" class="mititulo">Acerca de</p>
 
-    <p class="mitexto">
-        Lorem Ipsum is simply dummy text of the printing and
-        typesetting industry. Lorem Ipsum has been the industry's
-        standard dummy text ever since the 1500s, when an unknown
-        printer took a galley of type and scrambled it to make a
-        type specimen book. It has survived not only five centuries,
-        but also the leap into electronic typesetting, remaining
-        essentially unchanged. It was popularised in the 1960s
-        with the release of Letraset sheets containing Lorem
-        Ipsum passages, and more recently with desktop publishing
-        software like Aldus PageMaker including versions of
-        Lorem Ipsum.
-    </p>
+        <p class="mitexto">
+            Lorem Ipsum is simply dummy text of the printing and
+            typesetting industry. Lorem Ipsum has been the industry's
+            standard dummy text ever since the 1500s, when an unknown
+            printer took a galley of type and scrambled it to make a
+            type specimen book. It has survived not only five centuries,
+            but also the leap into electronic typesetting, remaining
+            essentially unchanged. It was popularised in the 1960s
+            with the release of Letraset sheets containing Lorem
+            Ipsum passages, and more recently with desktop publishing
+            software like Aldus PageMaker including versions of
+            Lorem Ipsum.
+        </p>
 
-    <div style="width: 100%">
-        <table >
-            <tr>
-                <th>Nombre</th>
-                <th>Apellido</th>
-                <th>Edad</th>
-            </tr>
-            <tr>
-                <td>Juan Pablo</td>
-                <td>Obregon</td>
-                <td>22</td>
-            </tr>
-            <tr>
-                <td>Nombre</td>
-                <td>Apellido</td>
-                <td>Edad</td>
-            </tr>
-    
-        </table>
-
-
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Edad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Juan Pablo</td>
+                        <td>Obregon</td>
+                        <td>22</td>
+                    </tr>
+                  
+                </tbody>
+            </table>
+        </div>
     </div>
 
-    
-
-
-
-
-    
-
+    <!-- Link to Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>
