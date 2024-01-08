@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Sample</title>
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
+
+
+</head>
+
+<body>
+
+    <table id="mytable">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Edad</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>John</td>
+                <td>Doe</td>
+                <td>25</td>
+            </tr>
+            <tr>
+                <td>Mary</td>
+                <td>Moe</td>
+                <td>35</td>
+            </tr>
+            <tr>
+                <td>July</td>
+                <td>Dooley</td>
+                <td>45</td>
+            </tr>
+        </tbody>
+
+        <body>
+            <!--Call your modal-->
+            <a id="demo01" href="#animatedModal">DEMO01</a>
+        
+            <!--DEMO01-->
+            <div id="animatedModal">
+                <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID  class="close-animatedModal" -->
+                <div class="close-animatedModal"> 
+                    CLOSE MODAL
+                </div>
+                    
+                <div class="modal-content">
+                          <!--Your modal content goes here-->
+                </div>
+            </div>
+        </body>
+
+
+
+
+        <div id="mycontent" class="myclass">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus optio expedita blanditiis ea repudiandae,
+            sequi id sit! Optio rerum quasi dolorum minima culpa et consectetur maiores explicabo, eum odio expedita.
+        </div>
+
+        <div id="mysecundarycontent" class="myclass">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus optio expedita blanditiis ea repudiandae,
+            sequi id sit! Optio rerum quasi dolorum minima culpa et consectetur maiores explicabo, eum odio expedita.
+        </div>
+
+        <button onclick="hideContent()">Ocultar</button>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+
+            $("#mysecundarycontent").mouseenter(function () {
+                $(this).css("color", "red");
+            });
+            $("#mysecundarycontent").mouseleave(function () {
+                $(this).css("color", "black");
+            });
+
+
+
+            function hideContent() {
+                //$("#mycontent").hide();
+                //$(".myclass").hide();
+                $("div").hide();
+            }
+            $(document).ready(function () {
+                console.log("Document ready");
+                 $("#demo01").animatedModal();
+            });
+
+            $("btnHide").click(function () {
+                hideContent();
+            });
+
+            $(document).ready(function () {
+                $('#mytable').DataTable();
+            });
+
+
+
+
+        </script>
+
+        <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="animatedModal.js-master/animatedModal.min.js"></script>
+
+
+</body>
+
+</html>

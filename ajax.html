@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Ajax</title>
+</head>
+
+<body>
+    <div id="userinfo">
+    </div>
+
+    <button onclick="loadInfo()">View Info</button>
+
+    <script>
+        function loadInfo() {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onload = function () {
+               console.log(this.responseText);
+               document.getElementById("userinfo").innerHTML = this.responseText;
+            };
+            xmlhttp.open("GET", "ajax_info.txt", true);
+            xmlhttp.send();
+            console.log("Request sent");
+        }
+    </script>
+</body>
+
+</html>
