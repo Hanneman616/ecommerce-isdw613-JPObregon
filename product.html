@@ -274,6 +274,27 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function traverseDOM(nodo){
+            var childnodes = nodo.childNodes;
+            // for(var i=0; i<childnodes.length; i++){
+            //     var child = childnodes[i];
+            //     if(child.nodeType == 1){
+            //         traverseDOM(child);
+            //     }
+            // }
+
+            childnodes.forEach(element => {
+                console.log("Nodo:" + element.nodeName + " Tipo:" + element.nodeType + " Valor:" + element.nodeValue);
+                console.log("Nodopadre:" + element.parentNode.nodeName  );
+                if(element.hasChildNodes()){
+                    traverseDOM(element);
+                }
+            });
+        }
+
+        traverseDOM(document.body);
+    </script>
 </body>
 
 </html>

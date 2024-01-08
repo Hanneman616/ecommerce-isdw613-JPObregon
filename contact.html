@@ -8,7 +8,7 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 
-<body>
+<body onload="pageInitialize()">
 
 
 
@@ -20,11 +20,11 @@
 
     <div class="container">
         <h1 style="font-size: 50px;">Cont&aacute;ctenos</h1>
-        <form action="contact.php" method="post">
+        <form method= "GET" action="/processForm.html" onsubmit="return validateForm()">
             <div class="form-group row">
                 <label for="name" class="col-sm-2 col-form-label">Nombre:</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" name="name" id="name" required>
+                    <input type="text" class="form-control" name="name" id="name" required >
                 </div>
             </div>
             <div class="form-group row">
@@ -39,18 +39,48 @@
                     <textarea class="form-control" name="message" id="message" cols="30" rows="10" required></textarea>
                 </div>
             </div>
-            <div class="form-group row">
-                <div class="col-sm-10 offset-sm-2">
-                    <input type="submit" class="btn btn-primary" value="Enviar" >
-                </div>
-            </div>
+            
+
+            <input type="submit" value="Enviar" class="btn btn-primary">
+            
         </form>
+        <button onclick="agregarParrafo()">Agregar parrafo</button>
     </div>
 
     <!-- Link to Bootstrap JS and Popper.js -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+    <script>
+        function agregarParrafo(){
+            var parrafo = document.createElement("p");
+        var texto = document.createTextNode("Parrafo creado dinamicamente");
+        parrafo.appendChild(texto);
+        document.body.appendChild(parrafo);
+        }
+
+        function pageInitialize() {
+            console.log("Page initialized");
+        }
+
+        function validateForm(){
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+
+            if(name == "" || email == "" || message == ""){
+                alert("Todos los campos son obligatorios");
+                return false;
+            }
+            else{
+                return true;
+            }
+
+        }
+        
+    </script>
 </body>
 
 </html>
